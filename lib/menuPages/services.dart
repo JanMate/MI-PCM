@@ -17,7 +17,7 @@ class ServicesPage extends StatelessWidget {
               padding: EdgeInsets.all(8.0),
               splashColor: Colors.blueAccent,
               onPressed: () {
-                Navigator.pushNamed(context, '/service/cleaning');
+//                Navigator.pushNamed(context, '/service/cleaning');
               },
               child: Container(
                 child: Center(
@@ -39,7 +39,7 @@ class ServicesPage extends StatelessWidget {
               padding: EdgeInsets.all(8.0),
               splashColor: Colors.blueAccent,
               onPressed: () {
-                Navigator.pushNamed(context, '/service/moving');
+//                Navigator.pushNamed(context, '/service/moving');
               },
               child: Container(
                 child: Center(
@@ -62,7 +62,7 @@ class ServicesPage extends StatelessWidget {
               padding: EdgeInsets.all(8.0),
               splashColor: Colors.blueAccent,
               onPressed: () {
-                Navigator.pushNamed(context, '/service/reconstruction');
+//                Navigator.pushNamed(context, '/service/reconstruction');
               },
               child: Container(
                 child: Center(

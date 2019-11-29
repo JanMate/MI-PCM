@@ -15,6 +15,9 @@ class NotificationPage extends StatelessWidget {
           leading: Icon(Icons.person),
           title: Text(notificationService.notifications[index].title),
           subtitle: Text(notificationService.notifications[index].description),
+          onTap: () {
+            // do nothing so far
+          },
         );
       }
     );

@@ -1,6 +1,9 @@
 
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong/latlong.dart';
 import 'package:the_game/model/offerDetail.dart';
 
 class OfferService {
@@ -16,4 +19,25 @@ class OfferService {
     OfferDetail("Byt 5+kk", "Nabízím ke spolubydlení krásný byt po rekonstrukci. Nastěhování možné ihned.",
         "Letňany", "Dobratická 524, Praha 18", 4300, 1500, 50.1309475, 14.5084703, [ "Pračka", "Televize", "Internet", "Sporák", "Myčka" ]),
   ];
+
+  List<Marker> getMarkers(BuildContext context){
+    return offers.asMap().map((index, offer) =>
+      MapEntry(index, Marker(
+        width: 80.0,
+        height: 80.0,
+        point: LatLng(offer.latitude, offer.longitude),
+        builder: (ctx) =>
+            Container(
+              child: IconButton(
+                icon: Icon(Icons.location_on,
+                  size: 50,),
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context, '/offer/detail',
+                    arguments: offers[index],);
+                },
+              ),
+            ),
+      ))).values.toList();
+  }
 }

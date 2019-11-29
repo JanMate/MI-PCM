@@ -11,6 +11,12 @@ class MessagesPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Zprávy'),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // do nothing so far
+          },
+          child: Icon(Icons.add),
+        ),
         body: ListView.builder(
             itemCount: messageService.messages.length,
             itemBuilder: (context, index) {
@@ -18,6 +24,9 @@ class MessagesPage extends StatelessWidget {
                 leading: Icon(Icons.person),
                 title: Text(messageService.messages[index].name),
                 subtitle: Text(messageService.messages[index].text),
+                onTap: () {
+                  // do nothing so far
+                },
               );
             }),
     );

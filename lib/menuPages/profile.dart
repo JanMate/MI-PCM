@@ -34,12 +34,11 @@ class ProfilePageState extends State<ProfilePage> {
               ),
             ],
           ),
+          Padding(padding: EdgeInsets.all(5.0)),
           Container(
-            child: Icon(
-              Icons.person,
-              size: 180,
-            ),
+            child: Image.asset("images/person.jpg"),
           ),
+          Padding(padding: EdgeInsets.all(10.0)),
           Text("Software developer"),
           Padding(padding: EdgeInsets.all(5.0)),
           Text("ČVUT FIT"),

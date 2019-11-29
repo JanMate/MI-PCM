@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:the_game/model/offerDetail.dart';
+import 'package:the_game/components/checkBoxTile.dart';
 
 class MyNewOfferPage extends StatelessWidget {
   MyNewOfferPage();
@@ -74,58 +75,28 @@ class MyNewOfferPage extends StatelessWidget {
           ),
           Padding(padding: EdgeInsets.all(20.0)),
           Text("Vybavení", style: TextStyle(fontSize: 20)),
-          ListTile(
-            leading: Checkbox(
-              value: false,
-              //onChanged: null,
-            ),
-            title: Text("Pračka"),
-          ),
-          ListTile(
-            leading: Checkbox(
-              value: false,
-              //onChanged: null,
-            ),
-            title: Text("Televize"),
-          ),
-          ListTile(
-            leading: Checkbox(
-              value: false,
-              //onChanged: null,
-            ),
-            title: Text("Sporák s troubou"),
-          ),
-          ListTile(
-            leading: Checkbox(
-              value: false,
-              //onChanged: null,
-            ),
-            title: Text("Internet"),
-          ),
-          ListTile(
-            leading: Checkbox(
-              value: false,
-              //onChanged: null,
-            ),
-            title: Text("Myčka"),
-          ),
-          ListTile(
-            leading: Checkbox(
-              value: false,
-              //onChanged: null,
-            ),
-            title: Text("Mikrovlnná trouba"),
-          ),
+          CheckBoxTile(text: "Pračka"),
+          CheckBoxTile(text: "Televize"),
+          CheckBoxTile(text: "Sporák s troubou"),
+          CheckBoxTile(text: "Internet"),
+          CheckBoxTile(text: "Myčka"),
+          CheckBoxTile(text: "Mikrovlnná trouba"),
           Padding(padding: EdgeInsets.all(20.0)),
           ListTile(
             leading: Icon(Icons.add_a_photo),
-            title: Text("Nahrát foto"),
+            title: Text("Pořídit foto"),
+            onTap: () {
+              // do nothing so far
+            },
           ),
           Padding(padding: EdgeInsets.all(10.0)),
           Text("Spolubydlící", style: TextStyle(fontSize: 20)),
           ListTile(
             leading: Icon(Icons.person_add),
             title: Text("Přidat spolubydlícího"),
+            onTap: () {
+              // do nothing so far
+            },
           ),
           Padding(padding: EdgeInsets.all(20.0)),
           FlatButton(
